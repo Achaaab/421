@@ -1,0 +1,28 @@
+package fr.guehenneux.die;
+
+/**
+ * wikipedia: "A small throwable object with multiple resting positions, used for generating random numbers."
+ *
+ * @author Jonathan Guéhenneux
+ *
+ * @param <T>
+ *            resting position type, usually a number
+ */
+public interface Die<T> {
+
+	/**
+	 * throw the die, setting a new resting position
+	 */
+	void doThrow();
+
+	/**
+	 * @return the resting position
+	 */
+	T getRestingPosition();
+
+	/**
+	 * @param restingPosition
+	 *            the resting position
+	 */
+	void setRestingPosition(T restingPosition);
+}
