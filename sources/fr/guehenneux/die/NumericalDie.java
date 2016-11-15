@@ -46,11 +46,11 @@ public class NumericalDie extends AbstractDie<Integer> {
 		this.upper = upper;
 		this.step = step;
 
-		doThrow();
+		roll();
 	}
 
 	@Override
-	public void doThrow() {
+	public void roll() {
 		restingPosition = lower + step * RANDOM.nextInt(facesCount);
 	}
 

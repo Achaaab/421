@@ -13,7 +13,7 @@ public interface Die<T> {
 	/**
 	 * throw the die, setting a new resting position
 	 */
-	void doThrow();
+	void roll();
 
 	/**
 	 * @return the resting position

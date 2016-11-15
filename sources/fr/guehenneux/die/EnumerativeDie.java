@@ -33,11 +33,11 @@ public class EnumerativeDie<T> extends AbstractDie<T> {
 		facesCount = restingPositions.size();
 		distinctRestingPositions = new HashSet<>(restingPositions);
 
-		doThrow();
+		roll();
 	}
 
 	@Override
-	public void doThrow() {
+	public void roll() {
 
 		int restingPositionIndex = RANDOM.nextInt(facesCount);
 		restingPosition = restingPositions.get(restingPositionIndex);

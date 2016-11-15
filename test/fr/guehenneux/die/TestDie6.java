@@ -64,13 +64,13 @@ public class TestDie6 {
 
 		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
 
-		die.doThrow();
+		die.roll();
 		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
 
-		die.doThrow();
+		die.roll();
 		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
 
-		die.doThrow();
+		die.roll();
 		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
 	}
 }
