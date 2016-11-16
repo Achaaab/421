@@ -8,7 +8,7 @@ package fr.guehenneux.die;
 public class Die6 extends NumericalDie {
 
 	/**
-	 * Create a new die with 6 resting positions from 1 to 6 and throw it to set the first resting position.
+	 * Create a die with 6 resting positions from 1 to 6 and throw it to set the first resting position.
 	 */
 	public Die6() {
 		super(6);

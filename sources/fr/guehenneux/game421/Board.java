@@ -1,8 +1,5 @@
 package fr.guehenneux.game421;
 
-import java.util.Set;
-
-import fr.guehenneux.die.Die6;
 
 /**
  * a board
@@ -12,7 +9,7 @@ import fr.guehenneux.die.Die6;
 public interface Board {
 
 	/**
-	 * @return the 3 dice 6
+	 * @return the set of dice
 	 */
-	Set<Die6> getDice();
+	DiceSet421 getDiceSet();
 }

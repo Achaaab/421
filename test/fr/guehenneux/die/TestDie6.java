@@ -3,7 +3,6 @@ package fr.guehenneux.die;
 import java.security.InvalidParameterException;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,13 +16,10 @@ import org.junit.Test;
 public class TestDie6 {
 
 	private Die6 die;
-	private Set<Integer> validRestingPositions;
 
 	@Before
 	public void before() {
-
 		die = new Die6();
-		validRestingPositions = IntStream.rangeClosed(1, 6).boxed().collect(Collectors.toSet());
 	}
 
 	@Test(expected = InvalidParameterException.class)
@@ -60,17 +56,34 @@ public class TestDie6 {
 	}
 
 	@Test
+	public void getRestingPosititions() {
+
+		Set<Integer> restingPositions = die.getRestingPositions().collect(Collectors.toSet());
+
+		Assert.assertEquals(restingPositions.size(), 6);
+
+		Assert.assertTrue(restingPositions.contains(1));
+		Assert.assertTrue(restingPositions.contains(2));
+		Assert.assertTrue(restingPositions.contains(3));
+		Assert.assertTrue(restingPositions.contains(4));
+		Assert.assertTrue(restingPositions.contains(5));
+		Assert.assertTrue(restingPositions.contains(6));
+	}
+
+	@Test
 	public void validRestingPosition() {
 
-		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
+		Set<Integer> restingPositions = die.getRestingPositions().collect(Collectors.toSet());
+
+		Assert.assertTrue(restingPositions.contains(die.getRestingPosition()));
 
 		die.roll();
-		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
+		Assert.assertTrue(restingPositions.contains(die.getRestingPosition()));
 
 		die.roll();
-		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
+		Assert.assertTrue(restingPositions.contains(die.getRestingPosition()));
 
 		die.roll();
-		Assert.assertTrue(validRestingPositions.contains(die.getRestingPosition()));
+		Assert.assertTrue(restingPositions.contains(die.getRestingPosition()));
 	}
 }

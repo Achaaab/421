@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Stream;
 
 /**
  * A die with enumerated resting positions.
@@ -51,5 +52,10 @@ public class EnumerativeDie<T> extends AbstractDie<T> {
 		}
 
 		super.setRestingPosition(restingPosition);
+	}
+
+	@Override
+	public Stream<T> getRestingPositions() {
+		return restingPositions.stream();
 	}
 }

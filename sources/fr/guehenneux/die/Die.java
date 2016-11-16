@@ -1,5 +1,7 @@
 package fr.guehenneux.die;
 
+import java.util.stream.Stream;
+
 /**
  * wikipedia: "A small throwable object with multiple resting positions, used for generating random numbers."
  *
@@ -25,4 +27,9 @@ public interface Die<T> {
 	 *            the resting position
 	 */
 	void setRestingPosition(T restingPosition);
+
+	/**
+	 * @return the possible resting positions
+	 */
+	Stream<T> getRestingPositions();
 }

@@ -1,6 +1,7 @@
 package fr.guehenneux.die;
 
 import java.security.InvalidParameterException;
+import java.util.stream.Stream;
 
 /**
  * @author Jonathan Guéhenneux
@@ -62,5 +63,10 @@ public class NumericalDie extends AbstractDie<Integer> {
 		}
 
 		super.setRestingPosition(restingPosition);
+	}
+
+	@Override
+	public Stream<Integer> getRestingPositions() {
+		return Stream.iterate(lower, restingPosition -> restingPosition + step).limit(facesCount);
 	}
 }
