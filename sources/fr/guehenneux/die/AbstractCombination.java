@@ -12,6 +12,13 @@ import java.util.Collection;
 public abstract class AbstractCombination<T> extends ArrayList<T> implements Combination<T> {
 
 	/**
+	 * create an empty combination
+	 */
+	public AbstractCombination() {
+
+	}
+
+	/**
 	 * create a combination of specified length with {@code null} resting positions
 	 *
 	 * @param length

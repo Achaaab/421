@@ -58,4 +58,9 @@ public class EnumerativeDie<T> extends AbstractDie<T> {
 	public Stream<T> getRestingPositions() {
 		return restingPositions.stream();
 	}
+
+	@Override
+	public String toString() {
+		return restingPosition.toString();
+	}
 }

@@ -23,27 +23,27 @@ public class TestDie6 {
 	}
 
 	@Test(expected = InvalidParameterException.class)
-	public void invalidRestingPosition1() {
+	public void invalidRestingPosition0() {
 		die.setRestingPosition(-100);
 	}
 
 	@Test(expected = InvalidParameterException.class)
-	public void invalidRestingPosition2() {
+	public void invalidRestingPosition1() {
 		die.setRestingPosition(0);
 	}
 
 	@Test(expected = InvalidParameterException.class)
-	public void invalidRestingPosition3() {
+	public void invalidRestingPosition2() {
 		die.setRestingPosition(7);
 	}
 
 	@Test(expected = InvalidParameterException.class)
-	public void invalidRestingPosition4() {
+	public void invalidRestingPosition3() {
 		die.setRestingPosition(Integer.MIN_VALUE);
 	}
 
 	@Test(expected = InvalidParameterException.class)
-	public void invalidRestingPosition5() {
+	public void invalidRestingPosition4() {
 		die.setRestingPosition(Integer.MAX_VALUE);
 	}
 

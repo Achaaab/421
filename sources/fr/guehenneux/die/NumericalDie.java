@@ -69,4 +69,9 @@ public class NumericalDie extends AbstractDie<Integer> {
 	public Stream<Integer> getRestingPositions() {
 		return Stream.iterate(lower, restingPosition -> restingPosition + step).limit(facesCount);
 	}
+
+	@Override
+	public String toString() {
+		return restingPosition.toString();
+	}
 }
